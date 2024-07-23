@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Product;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class ProductSeeder extends Seeder
 {
@@ -13,12 +14,11 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        //
-        Product::create([
-            'name' => 'Laptop',
-            'price' => 1000,
-            'description' => 'Laptop Asus',
-            'category_id' => 1,
+        DB::table('products')-> insert([
+            'name' =>"con chó",
+            'description' => "chó",
+            'price' => 10000,
+
         ]);
     }
 }
