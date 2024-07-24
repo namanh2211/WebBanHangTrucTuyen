@@ -8,6 +8,7 @@ use App\Http\Controllers\client\HomepageController;
 use App\Http\Controllers\Admin\AdminController;
 
 
+
 // client
 Route::get('/',[HomepageController::class , 'index'])->name('homepage');
 // Route::get('/sanpham',[HomepageController::class , 'products'])->name('product');
@@ -25,6 +26,8 @@ Route::get('/sanpham', [ProductController::class, 'products'])->name('product');
 
 
 
+
 Route::get('/admin',[AdminController::class , 'index'])->name('admin');
+
 
 
